@@ -1,0 +1,111 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: hsl(257, 40%, 49%)
+}
+
+main {
+    height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+    background: url(../images/bg-desktop.svg) no-repeat center;
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat (3, 1fr);
+    grid-template-areas: 
+    "header header"
+    "main-image info"
+    "footer footer";
+}
+
+/* HEADER */ 
+.container .header {
+    grid-area: header;
+    height: 20vh;
+    margin: 0.5% 0.5% 0 5%;
+    background: url(../images/logo.svg) no-repeat left;
+    background-size: 15%;
+}
+
+
+/* MAIN-IMAGE */ 
+.container .main-image {
+    grid-area: image;
+    max-width: 86%;
+    margin: 1% 0 0 10%;
+}
+
+/* INFO  */ 
+.container .info {
+    grid-area: info;
+    height: 70vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+}
+
+.container .info h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    max-width: 70%;
+    margin: 6% 0 2.6% 1.4%; 
+}
+
+.container .info p {
+    font-weight: 400;
+    font-size: 15px;
+    max-width: 75%;
+    margin: 0 0 2.6% 1.4%;
+    line-height: 22px;
+}
+
+.container .info .btn-register {
+    display: flex;
+    align-self: auto;
+    color: hsl(257, 40%, 49%);
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 160px;
+    background-color: #fff;
+    margin: 0.5% 0 0 1.4%;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.container .info .btn-register:hover {
+    background-color: hsl(300, 69%, 71%);
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+/* FOOTER */ 
+.container .social {
+    grid-area: footer;
+    height: 5.7vh;
+    display: flex;
+    gap: 10px;
+    margin: 0 0 0 80%
+}
+
+.container .social .social-items {
+    color: #fff;
+    height: 35px;
+    width: 35px;
+    border: solid 1px #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .social .social-items:hover {
+    color: hsl(300, 69%, 71%);
+    border: solid 1px hsl(300, 69%, 71%);
+    transition: 0.3s ease-in-out;
+}
